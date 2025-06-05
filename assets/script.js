@@ -1,6 +1,6 @@
 document.querySelector("form").addEventListener("submit", function(event) {
     if (!this.checkValidity()) {
-        event.preventDefault(); // Impede o envio se os campos não estiverem preenchidos corretamente
+        event.preventDefault(); 
         alert("Por favor, preencha todos os campos corretamente!");
     }
 });
@@ -28,12 +28,12 @@ function nextSlider() {
 
 function prevSlider() {
   hideSlider();
-  currentSlide = (currentSlide - 1 + slider.length) % slider.length; // Volta ao último slide quando chega ao primeiro
+  currentSlide = (currentSlide - 1 + slider.length) % slider.length; 
   showSlider();
 }
 
 // Adicionando funcionalidade de autoplay
-let slideInterval = setInterval(nextSlider, 3000); // Troca a cada 3 segundos
+let slideInterval = setInterval(nextSlider, 3000); 
 
 // Pausa o autoplay quando o usuário interage e reinicia depois
 function restartAutoPlay() {
@@ -51,5 +51,5 @@ btnPrev.addEventListener('click', () => {
   restartAutoPlay();
 });
 
-// Exibir o primeiro slide ao carregar a página
+
 showSlider();
