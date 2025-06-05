@@ -22,7 +22,7 @@ function showSlider() {
 
 function nextSlider() {
   hideSlider();
-  currentSlide = (currentSlide + 1) % slider.length; // Loop infinito
+  currentSlide = (currentSlide + 1) % slider.length; 
   showSlider();
 }
 
