@@ -14,20 +14,20 @@ function showSlider() {
 
 function nextSlider() {
   hideSlider();
-  currentSlide = (currentSlide + 1) % slider.length; // Loop infinito
+  currentSlide = (currentSlide + 1) % slider.length; 
   showSlider();
 }
 
 function prevSlider() {
   hideSlider();
-  currentSlide = (currentSlide - 1 + slider.length) % slider.length; // Volta ao último slide quando chega ao primeiro
+  currentSlide = (currentSlide - 1 + slider.length) % slider.length; 
   showSlider();
 }
 
 // Adicionando funcionalidade de autoplay
-let slideInterval = setInterval(nextSlider, 3000); // Troca a cada 3 segundos
+let slideInterval = setInterval(nextSlider, 3000); 
 
-// Pausa o autoplay quando o usuário interage e reinicia depois
+
 function restartAutoPlay() {
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlider, 3000);
@@ -43,5 +43,5 @@ btnPrev.addEventListener('click', () => {
   restartAutoPlay();
 });
 
-// Exibir o primeiro slide ao carregar a página
+
 showSlider();
