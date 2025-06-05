@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CMAC - Comunidade de Mães Atípicas de Cajamar. Conheça mais sobre inclusão e as necessidades especiais.">
+    <link rel="shortcut icon" href="./assets/Logos/Logo_CMAC_redondo.ico">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <title>CMAC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-image: url('./assets/Logos/cmac fundo.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navegacao">
+        <div class="navegacao__logo">
+            <img class="navegacao__logo-imagem" src="./assets/Logos/logo_cmac_redondo.png" width="50px"
+                alt="Logo circular da Comunidade de Mães Atípicas de Cajamar">
+            <h1 class="navegacao__logo-titulo">CMAC</h1>
+        </div>
+        <nav class="navegacao__menu">
+            <ul class="navegacao__menu-lista">
+                <li class="navegacao__menu-item"><a class="navegacao__menu-link" href="index.html">Bem Vindos</a></li>
+                <li class="navegacao__menu-item"><a class="navegacao__menu-link" href="about.html">Sobre Nós</a></li>
+                <li class="navegacao__menu-item"><a class="navegacao__menu-link" href="partners.html">Parcerias</a></li>
+                <li class="navegacao__menu-item"><a class="navegacao__menu-link" href="events.html">Eventos</a></li>
+                <li class="navegacao__menu-item"><a class="navegacao__menu-link" href="whocmacis.html">Quem Somos</a></li>
+                <li class="navegacao__menu-item"><a class="navegacao__menu-link" href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h1 id="titulo">Seja bem-vindo(a) à CMAC</h1>
+        <p id="subtitulo">Complete com suas informações</p>
+    </div>
+
+    <form action="https://httpbin.org/post" method="post" autocomplete="off">
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="inome"><strong>Nome:</strong></label>
+                <input type="text" name="nome" id="inome" maxlength="30" placeholder="Nome completo" autocomplete="name"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="isobrenome"><strong>Sobrenome:</strong></label>
+                <input type="text" name="sobrenome" id="isobrenome" required>
+            </div>
+
+            <div class="campo">
+                <label for="iemail"><strong>Email:</strong></label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="itel"><strong>Telefone:</strong></label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" placeholder="(xx)xxxxx-xxxx" required>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="iest"><strong>Estado:</strong></label>
+            <select name="estado" id="iest">
+                <option value="" selected>---Selecione---</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="imsg"><strong>Mensagem:</strong></label>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+        </div>
+    
+        <div class="campo">
+         <input class="submit" type="submit" onclick="alert ('Obrigado por entrar em contato. Em breve retornaremos!')" value="Enviar">
+         <input class="reset" type="reset" value="Limpar" id="btnLimpar">
+        </div>
+    </form>
+    <main class="formulario">
+        <h1 class="formulario__titulo">Visão de futuro</h1>
+        <p class="formulario__titulo__texto"> A CMAC almeja um futuro em que as crianças com necessidades especiais de
+            Cajamar possam viver em uma sociedade que as acolha, compreenda e ofereça os recursos necessários para o seu
+            pleno desenvolvimento.
+            <br>Acreditamos que, com o apoio mútuo, a sensibilização da comunidade e a parceria com os serviços públicos
+            e privados, podemos construir uma cidade mais inclusiva e justa para todos.
+        </p>
+        <br>
+    </main>
+
+    <div class="whatsapp-btn-container">
+        <a href="https://wa.me/5511919298104?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20CMAC."
+            target="_blank" class="whatsapp-btn">
+            <img src="./assets/MIDIAS/WhatsApp.svg.png" alt="WhatsApp Logo" class="whatsapp-icon">
+            Fale conosco
+        </a>
+    </div>
+    <script src="./assets/script.js"></script>
+
+    <footer class="rodape__info">
+        <p>&copy;2024 - CMAC - Comunidade de Mães Atípicas de Cajamar</p>
+        <p>CNPJ - XX.XXX.XXX/XXXX-XX</p>
+    </footer>
+</body>
+
+</html>
