@@ -392,16 +392,229 @@ textarea {
     font-family: 'Montserrat', sans-serif;
     padding: 1.5rem 0;
 }
-@media (max-width: 1024px){
-    .navegacao{
-       padding: 10%; 
+/* Media Queries para Responsividade */
+
+/* Telas muito pequenas (celulares em modo retrato, até 480px) */
+@media screen and (max-width: 480px) {
+    .navegacao {
+        flex-direction: column; /* Empilha itens da navegação */
+        align-items: center;
+        padding: 0.5rem;
     }
-    .navegacao__logo, .navegacao__menu, .navegacao__menu-item, .navegacao__menu-link,.navegacao__menu-lista, .navegacao__logo-titulo{
-       justify-content: center; 
-       gap:0;
+
+    .navegacao__logo {
+        margin-bottom: 1rem; /* Espaçamento entre logo e menu */
     }
-    .apresentacao{
-        flex-direction: column-reverse;
+
+    .navegacao__menu-lista {
+        flex-direction: column; /* Empilha itens do menu */
+        gap: 0.8rem;
+        text-align: center;
     }
-    
+
+    .navegacao__menu-link {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte do menu */
+    }
+
+    .apresentacao {
+        flex-direction: column; /* Empilha o conteúdo da apresentação */
+        margin: 5%;
+        text-align: center;
+    }
+
+    .apresentacao__conteudo {
+        width: 100%; /* Ocupa a largura total */
+        align-items: center;
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 2rem; /* Diminui o tamanho do título principal */
+    }
+
+    .apresentacao__conteudo__texto .p {
+        font-size: 1rem; /* Diminui o tamanho do texto */
+    }
+
+    .container-slider {
+        flex-direction: column; /* Empilha o slider */
+        min-height: auto; /* Altura automática */
+    }
+
+    .container-images {
+        width: 90%; /* Ajusta a largura das imagens do slider */
+        margin-bottom: 1rem;
+    }
+
+    .apresentacao__titulo {
+        width: 90%; /* Ajusta a largura do título do grid */
+        font-size: 2rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Uma coluna para os itens do grid */
+        padding: 10px;
+    }
+
+    .apresentacao__tema {
+        width: 90%; /* Ajusta a largura dos temas */
+        height: auto; /* Altura automática */
+        margin: 0 auto; /* Centraliza */
+        padding: 1rem;
+    }
+
+    .apresentacao__destaque {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        text-indent: 0;
+        margin: 5px;
+    }
+
+    .apresentacao__links {
+        gap: 1rem; /* Diminui o espaçamento entre os links */
+    }
+
+    .apresentacao__links_subtitulo {
+        font-size: 1.2rem;
+    }
+
+    .apresentacao__links__link {
+        width: 90%; /* Ajusta a largura dos botões de link */
+        font-size: 1.2rem;
+        padding: 1rem 0;
+    }
+
+    .formulario__titulo {
+        font-size: 2rem;
+    }
+
+    .formulario__titulo__texto {
+        width: 90%; /* Ajusta a largura do texto do formulário */
+        font-size: 0.9rem;
+        text-indent: 0;
+    }
+
+    input, select, textarea, .submit, .reset {
+        width: 90%; /* Ajusta a largura dos campos do formulário e botões */
+        max-width: none; /* Remove o max-width para ocupar mais espaço */
+    }
+
+    .whatsapp-btn {
+        font-size: 0.9rem;
+        padding: 0.8em;
+        gap: 0.5rem;
+    }
+
+    .whatsapp-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .rodape__texto {
+        margin: 5%;
+        text-align: center;
+    }
+
+    .rodape__info {
+        font-size: 0.8rem;
+    }
+}
+
+/* Telas médias (tablets em modo retrato e celulares em paisagem, 481px a 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .navegacao {
+        padding: 1rem;
+    }
+
+    .navegacao__menu-lista {
+        gap: 1rem;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+        margin: 6%;
+    }
+
+    .apresentacao__conteudo {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 2.5rem;
+    }
+
+    .apresentacao__conteudo__texto .p {
+        font-size: 1.2rem;
+    }
+
+    .container-slider {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .container-images {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+
+    .apresentacao__titulo {
+        width: 80%;
+        font-size: 2.5rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 ou mais colunas */
+    }
+
+    .apresentacao__tema {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .apresentacao__links__link {
+        width: 70%;
+    }
+
+    .formulario__titulo {
+        font-size: 3rem;
+    }
+
+    .formulario__titulo__texto {
+        width: 70%;
+    }
+}
+
+/* Telas maiores (tablets em modo paisagem e laptops pequenos, 769px a 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .apresentacao {
+        margin: 7%;
+    }
+
+    .apresentacao__conteudo {
+        width: 50%;
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 2.8rem;
+    }
+
+    .apresentacao__titulo {
+        width: 70%;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .apresentacao__links__link {
+        width: 450px;
+    }
+
+    .formulario__titulo__texto {
+        width: 60%;
+    }
 }
